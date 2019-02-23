@@ -78,7 +78,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '<your MAPBOX API KEY HERE>',
+    mapboxToken: 'pk.eyJ1IjoibWVsY2F0IiwiYSI6ImNqczJxY2ptcDI3ZWc0M21saDVkM3N5enAifQ.shnNUS3X1lx4IytHbs94qA',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -178,6 +178,8 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabIndex='4';
+  more.role = 'button'
   li.append(more)
 
   return li
@@ -209,3 +211,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('js/sw.js')
+  .then(function() {
+    console.log('service worker is up and running!')
+  })
+  .catch(function(err) {
+    console.log(err, 'not running');
+  })
+}

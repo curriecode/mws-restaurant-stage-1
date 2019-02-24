@@ -35,7 +35,7 @@ ul, li {
   /* added display to show nav horizontal at the top of the page */
 }
 a {
-	color: orange;
+	color: #9E0000;
   text-decoration: none;
 }
 a:hover, a:focus {
@@ -63,14 +63,19 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #footer {
   background-color: #444;
-  color: #aaa;
+  color:#ADADAD;
   font-size: 8pt;
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   /* margin-bottom: -7em; */
   position: relative;
+  margin-top: -3em;
   top: 7em;
+}
+
+footer strong {
+  color: whitesmoke;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -189,7 +194,7 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #9E0000;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -203,7 +208,7 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #9E0000;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -242,7 +247,7 @@ nav h1 a {
   padding: 0;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #9E0000;
   font-family: Arial,sans-serif;
   font-size: 19pt;
   font-weight: 200;
@@ -298,7 +303,7 @@ nav h1 a {
 
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #9E0000;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -365,6 +370,12 @@ h1#restaurant-name {
 }
 
 /* ====================== Media Queries ====================== */
+
+@media screen and (min-width: 500px) {
+  #footer {
+    font-size: 12pt;
+  }
+}
 
  @media screen and (min-width: 650px) {
   div#map {

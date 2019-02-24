@@ -29,10 +29,10 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request).then( function(response) {
            if(response) return response;
-           console.log('yay working!')
+           console.log('yay working!');
            return fetch(event.request);
         }).catch(function(err) {
-            console.log(err, 'fetch failed')
+            console.log(err, 'fetch failed');
             return fetch(event.request);
         })
     );

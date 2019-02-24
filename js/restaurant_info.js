@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
+    if (error) {
       console.error(error);
     } else {      
       self.newMap = L.map('map', {
